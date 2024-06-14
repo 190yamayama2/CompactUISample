@@ -35,6 +35,7 @@ struct CompactUISampleApp: App {
                             labelText: "Please enter password.",
                             passwordLayout: GeneralPasswordTextView.Layout(
                                 maxLength: 16,
+                                hasInputTextDisplayButton: true,
                                 placeholder: "8 to 16 half-width alphanumeric characters."
                             )
                         ),
@@ -69,6 +70,7 @@ struct CompactUISampleApp: App {
                             labelText: "Please enter password.",
                             passwordLayout: GeneralPasswordTextView.Layout(
                                 maxLength: 16,
+                                hasInputTextDisplayButton: true,
                                 placeholder: "8 to 16 half-width alphanumeric characters."
                             )
                         ),
@@ -76,6 +78,7 @@ struct CompactUISampleApp: App {
                             labelText: "Please enter your password again.",
                             passwordLayout: GeneralPasswordTextView.Layout(
                                 maxLength: 16,
+                                hasInputTextDisplayButton: true,
                                 placeholder: "8 to 16 half-width alphanumeric characters."
                             )
                         ),
