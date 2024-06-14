@@ -14,11 +14,15 @@ struct SignFeature {
     @ObservableState
     struct State: Equatable {
 
+        // MARK: - Properties
+
         var mode: SignMode
         var accountID: String
         var password: String
         var passwordConfirm: String
         var gender: Gender
+
+        // MARK: - Initializer
 
         init(
             mode: SignMode = .signUp,
