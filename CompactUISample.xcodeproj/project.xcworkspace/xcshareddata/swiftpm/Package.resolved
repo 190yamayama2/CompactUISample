@@ -14,8 +14,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/190yamayama2/CompactUI",
       "state" : {
-        "revision" : "e72af8ebb83f506c46ff68e6ee7fb7a36b2b36bf",
-        "version" : "0.1.5"
+        "revision" : "5ac8f99e0b70fa7947b20b6076354690b334d559",
+        "version" : "0.1.7"
       }
     },
     {

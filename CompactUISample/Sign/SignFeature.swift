@@ -33,6 +33,7 @@ struct SignFeature {
             self.passwordConfirm = passwordConfirm
             self.gender = gender
         }
+
     }
 
     enum Action: Equatable {

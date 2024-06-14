@@ -26,7 +26,6 @@ struct CompactUISampleApp: App {
                         titleText: "Sign in",
                         accountIdFieldLayout: LabeledInputTextView.Layout(
                             labelText: "Please enter account id.",
-                            inputText: "",
                             textLayout: GeneralTextView.Layout(
                                 maxLength: 16,
                                 placeholder: "Please enter your name."
@@ -34,7 +33,6 @@ struct CompactUISampleApp: App {
                         ),
                         passwordFieldLayout: LabeledInputPasswordView.Layout(
                             labelText: "Please enter password.",
-                            passwordText: "",
                             passwordLayout: GeneralPasswordTextView.Layout(
                                 maxLength: 16,
                                 placeholder: "8 to 16 half-width alphanumeric characters."
@@ -62,7 +60,6 @@ struct CompactUISampleApp: App {
                         titleText: "Sign up",
                         accountIdFieldLayout: LabeledInputTextView.Layout(
                             labelText: "Please enter account id.",
-                            inputText: "",
                             textLayout: GeneralTextView.Layout(
                                 maxLength: 16,
                                 placeholder: "Please enter your name."
@@ -70,7 +67,6 @@ struct CompactUISampleApp: App {
                         ),
                         firstPasswordFieldLayout: LabeledInputPasswordView.Layout(
                             labelText: "Please enter password.",
-                            passwordText: "",
                             passwordLayout: GeneralPasswordTextView.Layout(
                                 maxLength: 16,
                                 placeholder: "8 to 16 half-width alphanumeric characters."
@@ -78,7 +74,6 @@ struct CompactUISampleApp: App {
                         ),
                         secondPasswordFieldLayout: LabeledInputPasswordView.Layout(
                             labelText: "Please enter your password again.",
-                            passwordText: "",
                             passwordLayout: GeneralPasswordTextView.Layout(
                                 maxLength: 16,
                                 placeholder: "8 to 16 half-width alphanumeric characters."

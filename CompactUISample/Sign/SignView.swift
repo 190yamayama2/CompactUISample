@@ -50,12 +50,14 @@ struct SignView: View {
                 .font(layout.signInLayout.subTitleFont)
             Spacer(minLength: layout.signInLayout.spacerSize)
             LabeledInputTextView(
+                inputText: store.accountID,
                 layout: layout.signInLayout.accountIdFieldLayout,
                 onSubmitText: { value in
                     store.send(.accountIDInput(value: value))
                 }
             )
             LabeledInputPasswordView(
+                inputText: store.password,
                 layout: layout.signInLayout.passwordFieldLayout,
                 onSubmitText: { value in
                     store.send(.passwordInput(value: value))
@@ -88,29 +90,32 @@ struct SignView: View {
             Spacer(minLength: layout.signUpLayout.spacerSize)
             Spacer()
             LabeledInputTextView(
+                inputText: store.accountID,
                 layout: layout.signUpLayout.accountIdFieldLayout,
                 onSubmitText: { value in
                     store.send(.accountIDInput(value: value))
                 }
             )
             LabeledInputPasswordView(
+                inputText: store.password,
                 layout: layout.signUpLayout.firstPasswordFieldLayout,
                 onSubmitText: { value in
                     store.send(.passwordInput(value: value))
                 }
             )
             LabeledInputPasswordView(
+                inputText: store.passwordConfirm,
                 layout: layout.signUpLayout.secondPasswordFieldLayout,
                 onSubmitText: { value in
                     store.send(.passwordConfirmInput(value: value))
                 }
             )
             LabeledSegmentPickerView(
-                selectedKey: "",
-                labelText: "Gender",
+                selectedKey: store.gender.key,
                 items: Gender.toTuple(),
                 pickerViewStyle: .segmented,
                 layout: LabeledSegmentPickerView.Layout(
+                    titleText: "Gender",
                     titleTextColor: .black,
                     titleAlignment: .leading,
                     segmentSelectedTextColor: .black,
@@ -298,7 +303,6 @@ extension SignView {
                 titleText: "Sign in",
                 accountIdFieldLayout: LabeledInputTextView.Layout(
                     labelText: "Please enter account id.",
-                    inputText: "",
                     textLayout: GeneralTextView.Layout(
                         maxLength: 16,
                         placeholder: "Please enter your name."
@@ -306,7 +310,6 @@ extension SignView {
                 ),
                 passwordFieldLayout: LabeledInputPasswordView.Layout(
                     labelText: "Please enter password.",
-                    passwordText: "",
                     passwordLayout: GeneralPasswordTextView.Layout(
                         maxLength: 16,
                         placeholder: "8 to 16 half-width alphanumeric characters."
@@ -334,7 +337,6 @@ extension SignView {
                 titleText: "Sign up",
                 accountIdFieldLayout: LabeledInputTextView.Layout(
                     labelText: "Please enter account id.",
-                    inputText: "",
                     textLayout: GeneralTextView.Layout(
                         maxLength: 16,
                         placeholder: "Please enter your name."
@@ -342,7 +344,6 @@ extension SignView {
                 ),
                 firstPasswordFieldLayout: LabeledInputPasswordView.Layout(
                     labelText: "Please enter password.",
-                    passwordText: "",
                     passwordLayout: GeneralPasswordTextView.Layout(
                         maxLength: 16,
                         placeholder: "8 to 16 half-width alphanumeric characters."
@@ -350,7 +351,6 @@ extension SignView {
                 ),
                 secondPasswordFieldLayout: LabeledInputPasswordView.Layout(
                     labelText: "Please enter your password again.",
-                    passwordText: "",
                     passwordLayout: GeneralPasswordTextView.Layout(
                         maxLength: 16,
                         placeholder: "8 to 16 half-width alphanumeric characters."
